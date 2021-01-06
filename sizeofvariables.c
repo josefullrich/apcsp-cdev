@@ -20,5 +20,12 @@ int main()
 
   double d = 123.456;
   printf("double d value %f and size: %lu bytes\n", d, sizeof(d));
+
+  unsigned int x = 8;
+  printf("unsigned int value %d and size: %lu bytes\n", x, sizeof(x));
+
+  short int y = 9;
+  printf("short int value %d and size: %lu bytes\n", y, sizeof(y));
+
 }
 
