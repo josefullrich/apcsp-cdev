@@ -2,6 +2,10 @@
 #include <math.h>
 
 
+
+
+// add your areaOfCircle function here - it must NOT printf, instead it must
+// return the result to be printed in main
 float areaOfCircle(float radius)
 {
   float area = radius * radius * M_PI;
@@ -9,32 +13,24 @@ float areaOfCircle(float radius)
 }
 
 
+int main() 
+{
+  // the two variables which control the number of times areaOfCircle is called
+  // in this case 5.2, 6.2, 7.2
+  float start, end;
+  printf("input lower: ");
+  scanf("%f", &start);
 
-int main(int argc, char* argv[])
-{ 
-  if (argc != 3)
-  {
-    printf("%s : please enter two integers\n", argv[0]);
-    return 1;
-  }
-  float start;
-  int found = sscanf(argv[1], "%f", &start);
-  if (found != 1)
-  {
-    printf("first value is not an rational number, enter two rational numbers\n");
-    return 1;
-  }
-  float end;
-  found = sscanf(argv[2], "%f", &end);
-  if (found != 1)
-  {
-    printf("second value is not an rational number, enter two rational numbers\n");
-    return 1;
-  }
+  printf("input upper: ");
+  scanf("%f", &end);
+
+
+  // add your code below to call areaOfCircle function with values between
+  // start and end
   for (float i=start; i <= end; i++)
   {
-  	float answer = areaOfCircle(i);
-  	printf("area of circle with radius of %f: %f\n", i, answer);
+	float answer = areaOfCircle(i);
+  	printf("area of radius %f = %f\n", i, answer);
   }
+  return 0;
 }
-
