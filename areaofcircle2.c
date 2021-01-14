@@ -18,15 +18,26 @@ int main()
   // the two variables which control the number of times areaOfCircle is called
   // in this case 5.2, 6.2, 7.2
   float start, end;
+  char input[256];
   printf("input lower: ");
   scanf("%f", &start);
-
+  while(start<0)
+  {
+  	printf("Please enter a positive value.\n");
+  	scanf("%f", &start);
+  }
   printf("input upper: ");
   scanf("%f", &end);
-
-
-  // add your code below to call areaOfCircle function with values between
-  // start and end
+  while(end<0)
+  {
+  	printf("Please enter a positive value.\n");
+  	scanf("%f", &end);
+  }
+  while(start>end)
+  {
+  	printf("Please enter a larger end value than start value\n");
+  	scanf("%f", &end);
+  }
   for (float i=start; i <= end; i++)
   {
 	float answer = areaOfCircle(i);
